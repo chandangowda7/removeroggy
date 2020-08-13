@@ -5,12 +5,17 @@ class NoOggyChecker
 {
   static void RemoveOggy(List<string> names)
   {
-    for(var i=names.Count-1;i>=0;i--)
+    List<string> duplicates=new List<string>(names);
+     names.Clear();
+    for(var i=duplicates.Count-1;i>=0;i--)
     {
-        if(names[i].StartsWith("oggy")) {
-            Console.WriteLine($"Need to remove {names[i]}!");
-            names.Remove(names[i]);
+        if(duplicates[i].StartsWith("oggy")) {
+            Console.WriteLine($"Need to remove {duplicates[i]}!");
         }
+        else
+           names.Add(duplicates[i]);
+          
+        
     }
   }
   static bool OggyIsRemoved(List<string> names)
