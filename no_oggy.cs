@@ -27,7 +27,7 @@ class NoOggyChecker
       return 0;
     } else {
       Console.WriteLine("Failed!!");
-      return 0;
+      return 1;
     }
   }
 }
