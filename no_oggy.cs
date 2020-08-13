@@ -10,6 +10,7 @@ class NoOggyChecker
     for(var i=duplicates.Count-1;i>=0;i--)
     {
         if(duplicates[i].StartsWith("oggy")) {
+          
             Console.WriteLine($"Need to remove {duplicates[i]}!");
         }
         else
